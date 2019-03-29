@@ -1,0 +1,7 @@
+(defmulti diet (fn [x](:eater x)
+(defmethod diet :herbivore [a] a )
+(diet {:species "deer" :name "Bambi" :age 1 :eater :herbivore}))
+(defmethod diet :herbivore "echo" )
+(defmulti diet (fn [x](:eater x)
+(defmethod diet :herbivore "echo" )
+(diet {:species "deer" :name "Bambi" :age 1 :eater :herbivore}))
